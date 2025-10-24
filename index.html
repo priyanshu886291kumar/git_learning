@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<title>Simple To‑Do</title>
+	<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+	<header>
+		<h1>Simple To‑Do</h1>
+		<p class="subtitle">Add tasks, mark complete, delete. Data stored in your browser.</p>
+	</header>
+
+	<main>
+		<section class="todo-app" aria-label="To‑Do Application">
+			<form id="task-form" aria-label="Add task">
+				<input id="task-input" type="text" placeholder="What needs to be done?" autocomplete="off" required />
+				<button id="add-btn" type="submit">Add</button>
+			</form>
+
+			<ul id="task-list" aria-live="polite">
+				<!-- tasks rendered here -->
+			</ul>
+
+			<div class="controls">
+				<span id="count">0 tasks</span>
+				<button id="clear-completed">Clear completed</button>
+			</div>
+		</section>
+	</main>
+
+	<footer>
+		<small>Created with plain HTML, CSS, and JavaScript.</small>
+	</footer>
+
+	<script src="script.js"></script>
+</body>
+</html>
