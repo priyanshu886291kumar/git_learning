@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About — Branch & Merge Test</title>
+  <style>
+    body{font-family:system-ui,Segoe UI,Roboto,Arial;margin:24px;color:#111}
+    pre{background:#f4f6f8;padding:12px;border-radius:6px;overflow:auto}
+    .note{color:#6b7280;font-size:14px}
+    a{color:#0b79d0}
+  </style>
+</head>
+<body>
+  <h1>Branch & Merge test</h1>
+  <p class="note">Use this file to verify making changes on another branch and merging once everything looks correct.</p>
+
+  <h2>Recommended workflow</h2>
+  <ol>
+    <li>Create and switch to a new branch for your change.</li>
+    <li>Edit files and commit the changes locally.</li>
+    <li>Push the branch to the remote and open a Pull Request (PR) or merge locally after review.</li>
+    <li>Once verified, merge into the target branch (e.g., main) and delete the feature branch.</li>
+  </ol>
+
+  <h3>Commands (copy / paste)</h3>
+  <pre><code># create and switch to a new branch
+git checkout -b feature/test-about
+
+# make changes, then stage & commit
+git add about.html
+git commit -m "Update about.html for branch/merge test"
+
+# push branch to origin
+git push -u origin feature/test-about
+
+# after review, merge to main (option A: via PR on remote)
+# Option B: merge locally
+git checkout main
+git pull origin main
+git merge --no-ff feature/test-about
+git push origin main
+
+# optionally delete the feature branch
+git branch -d feature/test-about
+git push origin --delete feature/test-about
+</code></pre>
+
+  <p class="note">If you plan to use a GUI (GitHub/GitLab/Bitbucket), open a PR from <strong>feature/test-about</strong> into <strong>main</strong>, review, then merge from the web UI.</p>
+
+  <footer>
+    <small class="note">Saved: about.html — change this text and push on a test branch to validate your flow.</small>
+  </footer>
+</body>
+</html>
