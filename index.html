@@ -1,32 +1,27 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width,initial-scale=1" />
-	<title>Todo List</title>
-	<link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-	<div id="app">
-		<h1>Todo List</h1>
-		<form id="task-form" aria-label="Add task">
-			<input type="text" id="task-input" placeholder="What needs to be done?" required autocomplete="off">
-			<button type="submit">Add Task</button>
-			
-		</form>
-		<ul id="task-list" aria-live="polite"></ul>
-		<div id="footer">
-			<div id="count"></div>
-			<button id="clear-completed" type="button">Clear Completed</button>
-			<button id="toggle-theme" type="button">Toggle Theme</button>
-		</div>
-	</div>
+    <div id="app">
+        <h1>Todo List</h1>
+        <form id="task-form">
+            <input type="text" id="task-input" placeholder="What needs to be done?" required>
+            <button type="submit">Add Task</button>
+        </form>
+        <ul id="task-list"></ul>
+        <div id="footer">
+            <div id="count"></div>
+            <button id="clear-completed">Clear Completed</button>
+            <button id="toggle-theme">Toggle Theme</button>
+        </div>
+    </div>
 
-	<script src="script.js"></script>
-	<p> added to check is about point to current commit and its previous commit also of another branch</p>
-		<p>This is the final merged version</p>
-
-     
+    <!-- Link your external script.js file -->
+    <script src="script.js"></script>
 </body>
 </html>
